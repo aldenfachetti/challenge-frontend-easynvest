@@ -1,5 +1,6 @@
 import './app.css'
-import { Router } from './router'
+import '../core/define-elements'
+import { Router } from '../core/router'
 
 export class App {
   constructor() {
@@ -9,12 +10,14 @@ export class App {
   }
 
   render() {
-    const path = this.router.path
+    const route = this.router.route
 
-    if (path) {
+    if (route) {
       this.app.innerHTML = `
         <app-navbar></app-navbar>
-        <${path.component}></${path.component}>
+        <div class="container">
+          <${route.component}></${route.component}>
+        </div>
       `
     } else {
       this.router.navigate('/cadastro')

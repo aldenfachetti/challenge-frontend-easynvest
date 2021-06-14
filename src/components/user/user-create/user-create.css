@@ -1,0 +1,113 @@
+.form {
+  padding: 2rem;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 45px;
+}
+
+input {
+  font-size: 18px;
+  padding: 10px 0;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #efeeed;
+}
+
+input:focus {
+  outline: none;
+}
+
+label {
+  color: #efeeed;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #cccccc;
+}
+
+input:focus ~ .bar:before,
+input:focus ~ .bar:after {
+  width: 50%;
+}
+
+.form-group.invalid input {
+  border-bottom: 1px solid #eb4a46;
+}
+
+.form-group.invalid .alert-error {
+  color: #eb4a46;
+}
+
+.form-group.invalid .bar:before,
+.form-group.invalid .bar:after {
+  background: #eb4a46;
+}
+
+.bar {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.bar:before,
+.bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #333333;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+.big-button {
+  background: #00c8b3;
+  border: none;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+  outline: none;
+  width: 100%;
+  border-radius: 35px;
+}
+
+.big-button:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.big-button:disabled {
+  color: #dddcdc;
+  background-color: #f6f6f6;
+  cursor: default;
+}

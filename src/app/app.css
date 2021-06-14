@@ -1,41 +1,24 @@
-.navbar,
-.nav-content {
-  display: flex;
-  flex-wrap: wrap;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.navbar {
-  flex-direction: column;
-  align-items: center;
-  margin: 2rem;
+.container {
+  font-family: 'Roboto', sans-serif;
+  width:60%;
+  margin:30px auto 0;
+  display:block;
+  background:#ffffff;
+  border: 1px solid #87027b;
+  border-radius: 8px;
+  padding: 20px;
 }
 
-.nav-content {
-  list-style-type: none;
-}
-
-.nav-item {
-  border-right: 1px solid #aaa;
-  padding: 0 1rem;
-}
-
-.nav-item:last-child {
-  border-right: none;
-}
-
-.nav-item a {
-  text-decoration: none;
-  color: #ccc;
-  font: 25px/1 Helvetica, Verdana, sans-serif;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-.nav-item a:hover {
-  transition: all 0.5s ease;
-  color: #333;
-}
-
-.nav-item a.active {
-  color: #333;
+@media (max-width: 576px) {
+  .container {
+    width:100%;
+  }
 }

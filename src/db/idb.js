@@ -1,15 +1,15 @@
 const idbPromise = new Promise((resolve, reject) => {
   const DBOpenRequest = indexedDB.open('easynvest', 1)
 
-  DBOpenRequest.onsuccess = () => {
+  DBOpenRequest.onsuccess = (event) => {
     const db = DBOpenRequest.result
     const request = db
       .transaction(['users'], 'readonly')
       .objectStore('users')
       .getAll()
 
-    request.onsuccess = (e) => {
-      if (e.target.result.length) {
+    request.onsuccess = (evt) => {
+      if (evt.target.result.length) {
         resolve(db)
       } else {
         fetch('https://private-21e8de-rafaellucio.apiary-mock.com/users')
@@ -24,6 +24,10 @@ const idbPromise = new Promise((resolve, reject) => {
           })
       }
     }
+  }
+
+  DBOpenRequest.onerror = (event) => {
+    reject('Database error: ' + event.target.errorCode)
   }
 
   DBOpenRequest.onupgradeneeded = (event) => {
