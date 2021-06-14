@@ -18,13 +18,6 @@ const config = {
           }
         }
       },
-      // {
-      //   test: /\.js$/,
-      //   exclude: /node_modules/,
-      //   use: {
-      //     loader: 'eslint-loader'
-      //   }
-      // },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
@@ -34,8 +27,8 @@ const config = {
   devServer: {
     inline: false,
     contentBase: path.join(__dirname, 'dist'),
-    port: 8000,
-    hot: true
+    hot: true,
+    port: 8000
   },
   output: {
     publicPath: '/',
@@ -44,7 +37,6 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: 'index.html',
       title: 'Challenge Front-End Easynvest'
     })
   ]

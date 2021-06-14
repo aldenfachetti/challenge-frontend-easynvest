@@ -1,3 +1,6 @@
-import "./styles/main.css";
+import { App } from './app/app'
 
-console.log("connected!");
+const app = new App()
+
+window.addEventListener('hashchange', () => app.render())
+window.addEventListener('load', () => app.render())
