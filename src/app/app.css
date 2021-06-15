@@ -6,12 +6,16 @@
   box-sizing: border-box;
 }
 
+.vsc-initialized {
+  background-color: #ffe49b;
+}
+
 .container {
   font-family: 'Roboto', sans-serif;
-  width:60%;
-  margin:30px auto 0;
-  display:block;
-  background:#ffffff;
+  width: 60%;
+  margin: 30px auto 0;
+  display: block;
+  background: #ffffff;
   border: 1px solid #87027b;
   border-radius: 8px;
   padding: 20px;
@@ -19,6 +23,6 @@
 
 @media (max-width: 576px) {
   .container {
-    width:100%;
+    width: 100%;
   }
 }
