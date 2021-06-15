@@ -86,7 +86,7 @@ export class UserCreate extends HTMLElement {
           <input name="name" class="form-control" required>
           <span class="bar"></span>
           <span class="alert-error"></span>
-          <label for="name">Nome completo (sem abreviações)</label>
+          <label for="name">Nome completo</label>
         </div>
         <div class="form-group">
           <input name="email" class="form-control" required>

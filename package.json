@@ -8,8 +8,6 @@
   "scripts": {
     "start": "webpack-dev-server --hot",
     "build-dev": "webpack",
-    "test": "jest",
-    "test-watch": "jest --watch",
     "clean": "rm dist/bundle.js dist/index.html"
   },
   "devDependencies": {
@@ -17,7 +15,6 @@
     "babel-preset-env": "^1.6.1",
     "css-loader": "^0.28.9",
     "html-webpack-plugin": "^2.30.1",
-    "jest": "^22.2.2",
     "style-loader": "^0.20.1",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.11.1"

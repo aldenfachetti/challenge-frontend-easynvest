@@ -39,3 +39,29 @@
   color: #666666;
   text-decoration: underline;
 }
+
+/* MOBILE */
+@media only screen and (max-width: 600px) {
+  .navbar {
+    margin: 2rem 0 0;
+  }
+
+  .navbar,
+  .nav-content {
+    justify-content: center;
+  }
+
+  .nav-item {
+    margin-bottom: 2rem;
+  }
+
+  .container {
+    width: 90%;
+    margin: 0 1.2rem;
+    padding: 0;
+  }
+
+  .card {
+    text-align: center;
+  }
+}
