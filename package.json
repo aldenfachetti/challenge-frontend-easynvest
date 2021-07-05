@@ -2,7 +2,7 @@
   "name": "challenge-frontend-easynvest",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://github.com/aldenfachetti/challenge-frontend-easynvest.git",
+  "repository": "https://github.com/aldenfachetti/webpack-test-js.git",
   "author": "Alden Fachetti <aldenmerlin@gmail.com>",
   "license": "MIT",
   "scripts": {
