@@ -4,6 +4,12 @@
       "@babel/preset-env",
       {
         "modules": false
+      },
+      "env",
+      {
+        "targets": {
+          "node": "4"
+        }
       }
     ]
   ],
