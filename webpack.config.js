@@ -11,12 +11,42 @@ module.exports = {
     contentBase: './dist'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          }
+        ]
+      },
+      {
+        test: /\.js$/,
+        // loader: 'babel-loader',
+        use: [
+          {
+            loader: path.resolve('path/to/loader.js')
+          }
+        ],
+        // include: [path.resolve(__dirname, 'src')],
+        exclude: [/node_modules/]
       }
     ]
   },
-  plugins: [new HtmlWebpackPlugin({ title: 'Challenge Front-End Easynvest' })]
+  resolveLoader: {
+    modules: ['node_modules', path.resolve(__dirname, 'loaders')]
+  },
+  resolve: {
+    extensions: ['.js', '.json']
+  },
+  // modules: ['node_modules'],
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Challenge Front-End Easynvest',
+      template: path.join(__dirname, 'index.html')
+    })
+  ]
 }
