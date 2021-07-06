@@ -17,7 +17,7 @@ export default (fixture = {}) => {
           use: {
             loader: path.resolve(__dirname, '../src/loader.js'),
             options: {
-              name: 'Panetone Maria'
+              name: 'Panetone Maria Teste'
             }
           }
         }

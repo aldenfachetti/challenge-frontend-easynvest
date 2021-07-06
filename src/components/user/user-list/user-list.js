@@ -14,9 +14,9 @@ export class UserList extends HTMLElement {
     const users = await this.userService.getAll()
 
     this.innerHTML = `
-      ${users.reduce((acc, user) => {
+      ${users.reduce((accumulator, user) => {
         return (
-          acc +
+          accumulator +
           `
           <div class="card">
             <div class="card-title">${user.name}</div>

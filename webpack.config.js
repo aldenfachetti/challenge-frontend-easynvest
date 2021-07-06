@@ -1,7 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-module.exports = {
+const config = {
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
@@ -14,26 +14,13 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: [
-          {
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader'
-          }
-        ]
-      },
-      {
-        test: /\.js$/,
-        // loader: 'babel-loader',
-        use: [
-          {
-            loader: path.resolve('path/to/loader.js')
-          }
-        ],
-        // include: [path.resolve(__dirname, 'src')],
-        exclude: [/node_modules/]
+        use: ['style-loader', 'css-loader']
       }
+      // {
+      //   test: /\.js$/,
+      //   use: 'babel-loader',
+      //   exclude: /node_modules/
+      // }
     ]
   },
   resolveLoader: {
@@ -42,11 +29,12 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.json']
   },
-  // modules: ['node_modules'],
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Challenge Front-End Easynvest',
-      template: path.join(__dirname, 'index.html')
+      title: 'Challenge Front-End Easynvest'
+      // template: path.join(__dirname, 'index.html')
     })
   ]
 }
+
+module.exports = config

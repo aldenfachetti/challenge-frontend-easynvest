@@ -25,6 +25,10 @@ export class UserEditButton extends HTMLElement {
 
   _onEditUser() {
     console.log('Not implemented yet')
+    // await this.userService.update(this.key)
+
+    // const event = new Event('render')
+    // document.querySelector('app-user-edit-button').dispatchEvent(event)
   }
 
   _render() {
